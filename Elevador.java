@@ -43,7 +43,11 @@ public class Elevador {
         }
 
         public void subir(){
-        andar++;        
+          if(andar<=totalAndares){
+            andar++; 
+          }
+          else 
+              System.out.println("você está no ultimo andar");
         }
         
         public void descer(){
@@ -51,7 +55,7 @@ public class Elevador {
                andar--;     
                }
           else
-              return System.out.println("Capacidade limite atingidida");
+             System.out.println("ja está no primeiro andar");
                  
           
         }     
@@ -61,7 +65,7 @@ public class Elevador {
               this.pessoasPresentes++;     
            }
           else
-             return System.out.println("Capacidade limite atingidida"); 
+             System.out.println("Capacidade limite atingidida"); 
               
        }
 
@@ -70,7 +74,7 @@ public class Elevador {
               this.pessoasPresentes--;     
            }
           else
-             return System.out.println("O elevador está vazio"); 
+              System.out.println("O elevador está vazio");
               
        }
 
@@ -136,6 +140,4 @@ public class Elevador {
 
               } 
         
-
-
 
